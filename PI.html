@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando o ChartJS</title>
+    <script scr="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="display: flex;">
+    <div>
+        <canvas id="myChart" style="position: relative; height:40vh; width:40vw;"></canvas>
+    </div>
+
+    <div>
+        <canvas id="myChart2" style="position: relative; height:40vh; width:40vw;"></canvas>
+    </div>
+</body>
+
+
+<script>
+    const labels = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+    ];
+
+
+
+    const date = {
+        lables: labels,
+        datasets: ({
+            labels: "My First dataset",
+            backgroundColor: 'rgb(255, 0, 0)',
+            borderColor: 'rgb(255, 0, 0)',
+            date: [0, 10, 5, 2, 20, 30, 45],
+        })
+    };
+
+    const config2 = {
+        type: 'line',
+        date: data,
+        options: {}
+    };
+
+    const config = {
+        type: 'bar',
+        date: data,
+        options: {}
+    };
+</script>
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config
+    );
+</script>
+</html>
